@@ -76,7 +76,7 @@ const CourierRegistration = () => {
   // Event handler for creating a new Courier
   const handleCreate = async () => {
     try {
-      await axios.post('http://localhost:8080/api/couriers/', {
+      await axios.post('https://api-ad.tharuksha.com/api/couriers/', {
         id:id,
         name: name,
         contactNumber: contactNumber,
@@ -93,7 +93,7 @@ const CourierRegistration = () => {
   const handleUpdate = async () => {
     if (id) {
       try {
-        await axios.put(`http://localhost:8080/api/couriers/${id}`, {
+        await axios.put(`https://api-ad.tharuksha.com/api/couriers/${id}`, {
           id:id,
           name: name,
           contactNumber: contactNumber,
@@ -113,7 +113,7 @@ const CourierRegistration = () => {
   const handleDelete = async () => {
     if (id) {
       try {
-        await axios.delete(`http://localhost:8080/api/couriers/${id}`);
+        await axios.delete(`https://api-ad.tharuksha.com/api/couriers/${id}`);
         alert('Courier deleted successfully');
       } catch (error) {
         console.error('Error deleting courier:', error);
@@ -128,7 +128,7 @@ const CourierRegistration = () => {
   const handleSearch = async () => {
     if (id) {
       try {
-        const response = await axios.get(`http://localhost:8080/api/couriers/${id}`);
+        const response = await axios.get(`https://api-ad.tharuksha.com/api/couriers/${id}`);
         if (response.data) {
           const courier = response.data;
           setName(courier.name || '');
