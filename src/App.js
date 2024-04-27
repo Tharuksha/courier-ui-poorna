@@ -76,7 +76,7 @@ const CourierRegistration = () => {
   // Event handler for creating a new Courier
   const handleCreate = async () => {
     try {
-      await axios.post('https://api-ad.tharuksha.com/api/couriers/', {
+      await axios.post('https://api-ad.tharuksha.com/api/couriers/add', {
         id:id,
         name: name,
         contactNumber: contactNumber,
